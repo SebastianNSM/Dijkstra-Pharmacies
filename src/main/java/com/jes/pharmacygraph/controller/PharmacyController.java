@@ -18,4 +18,10 @@ public class PharmacyController{
     public String getShortestPath(@RequestBody Query q){
         return pService.findShortestPath(q.getOrigin(), q.getDestination());
     }
+
+    @PostMapping("/adjacency")
+    public String getShortestPath(@RequestBody String name){
+        return pService.findAdjacencyList(name);
+    }
+
 }

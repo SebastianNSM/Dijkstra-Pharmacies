@@ -153,6 +153,9 @@ public class PharmacyRepository {
     public Graph getGraph() {
         return graph;
     }
+    public void resetGraph() {
+        this.graph = this.initializeGraph();
+    }
 
     public TablaHash getHash() {
         return hash;
